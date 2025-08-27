@@ -8,7 +8,7 @@ body {
         radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
     background-size: 62px 62px, 62px 62px, 100% 100%;
     background-attachment: fixed;
-    font-family: monospace
+    font-family: monospace;
 }
 
 .nav-bar {
@@ -40,7 +40,7 @@ body {
     background-image: conic-gradient(from var(--angle), #27a0c5, #27a0c5, #6100fd);
     z-index: -1;
     padding: 0px 0px;
-    animation: animate 4s linear infinite;
+    animation: animate 10s linear infinite;
 }
 
 .nav-bar::before {
@@ -76,8 +76,14 @@ body {
 
 .navbar li {
     cursor: pointer;
-    color: white;
     font-size: 18px;
+    color: white;
+}
+
+.navbar li:hover {
+    background: linear-gradient(90deg, #27a0c5, #d4a6ff, #8941fd);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .about {
@@ -99,13 +105,13 @@ body {
     font-weight: bold;
 }
 
-.about p{
+.about p {
     font-size: 1.1rem;
     line-height: 1.8;
     color: white;
 }
 
-hr{
+hr {
     width: 90%;
     border: none;
     height: 2px;
@@ -118,33 +124,37 @@ hr{
 }
 
 .skills h1 {
-  font-size: 3rem;
-  margin-bottom: 40px;
-  margin-left: 125px;
+    font-size: 3rem;
+    margin-bottom: 40px;
+    margin-left: 125px;
 }
 
 .skills-layout {
-  display: flex;
-  justify-content: center;
-  gap: 180px; 
-  margin-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    gap: 180px;
+    margin-bottom: 80px;
 }
 
 .box {
-  position: relative;
-  background: #0f172a; 
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  border-radius: 25px;
-  width: 590px;
-  height: 340px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+    position: relative;
+    background: #0f172a;
+    border: none;
+    border-radius: 25px;
+    width: 590px;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.box.tech-tools{
+    height:340px ;
 }
 
 .tech-tools {
-  display: flex;
-  margin: 0 auto;
+    display: flex;
+    margin: 0 auto;
 }
 
 .box::after,
@@ -157,7 +167,7 @@ hr{
     background-image: conic-gradient(from var(--angle), #27a0c5, #27a0c5, #6100fd);
     z-index: -1;
     padding: 0px 0px;
-    animation: animate 4s linear infinite;
+    animation: animate 10s linear infinite;
 }
 
 .box::before {
@@ -165,15 +175,60 @@ hr{
 }
 
 .box h2 {
-  padding: 5px 20px;
-  font-size: 1.2rem;
-  color: white;
+    padding: 5px 20px;
+    font-size: 1.2rem;
+    color: white;
+}
+.icons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
-.box img {
-  width: 40px;
-  height: 40px;
+.icon-circle{
+    background: linear-gradient(90deg, #27a0c5, #8941fd);
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease-in-out 0.2s;
+    margin-bottom: 20px;
 }
 
+.icon-circle:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #27a0c5;
+}
 
+.icon-circle::after{
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #27a0c5;
+    padding: 5px 5px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out, tarnsform 0.2s ease-in-out;
+    font-weight: bold;
+}
+
+.icon-circle:hover::after{
+    opacity: 1;
+    transform: translateX(-50%) translateY(5px);
+}
+
+.icon-circle i {
+  font-size: 56px;
+}
+
+.projects h1{
+    font-size: 3rem;
+    margin-bottom: 40px;
+    margin-left: 125px;
+}
 
