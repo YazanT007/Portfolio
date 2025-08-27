@@ -1,0 +1,179 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #020617;
+    background-image:
+        linear-gradient(to right, rgba(71, 85, 105, 0.3) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(71, 85, 105, 0.3) 1px, transparent 1px),
+        radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+    background-size: 62px 62px, 62px 62px, 100% 100%;
+    background-attachment: fixed;
+    font-family: monospace
+}
+
+.nav-bar {
+    position: relative;
+    background: #020617;
+    background-image:
+        linear-gradient(to right, rgba(71, 85, 105, 0.3) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(71, 85, 105, 0.3) 1px, transparent 1px),
+        radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+    background-size: 62px 62px, 62px 62px, 100% 100%;
+    background-attachment: fixed;
+    border-radius: 20px;
+    padding: 15px 30px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.nav-bar::after,
+.nav-bar::before {
+    content: "";
+    position: absolute;
+    width: 95.5%;
+    height: 100%;
+    border-radius: inherit;
+    background-image: conic-gradient(from var(--angle), #27a0c5, #27a0c5, #6100fd);
+    z-index: -1;
+    padding: 0px 0px;
+    animation: animate 4s linear infinite;
+}
+
+.nav-bar::before {
+    filter: blur(20px);
+}
+
+@property --angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0deg;
+}
+
+@keyframes animate {
+    to {
+        --angle: 360deg;
+    }
+}
+
+.logo {
+    color: white;
+    font-weight: bold;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+.navbar {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+}
+
+.about {
+    margin-top: 80px;
+    margin-left: 125px;
+    max-width: 700px;
+}
+
+.about h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #27a0c5, #d4a6ff, #8941fd);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+.about p{
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: white;
+}
+
+hr{
+    width: 90%;
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, #27a0c5, #d4a6ff, #8941fd);
+    margin-top: 35px;
+}
+
+.skills {
+    margin-top: 60px;
+}
+
+.skills h1 {
+  font-size: 3rem;
+  margin-bottom: 40px;
+  margin-left: 125px;
+}
+
+.skills-layout {
+  display: flex;
+  justify-content: center;
+  gap: 180px; 
+  margin-bottom: 80px;
+}
+
+.box {
+  position: relative;
+  background: #0f172a; 
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  width: 590px;
+  height: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tech-tools {
+  display: flex;
+  margin: 0 auto;
+}
+
+.box::after,
+.box::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background-image: conic-gradient(from var(--angle), #27a0c5, #27a0c5, #6100fd);
+    z-index: -1;
+    padding: 0px 0px;
+    animation: animate 4s linear infinite;
+}
+
+.box::before {
+    filter: blur(20px);
+}
+
+.box h2 {
+  padding: 5px 20px;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.box img {
+  width: 40px;
+  height: 40px;
+}
+
+
+
