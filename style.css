@@ -40,7 +40,7 @@ body {
     background-image: conic-gradient(from var(--angle), #27a0c5, #27a0c5, #6100fd);
     z-index: -1;
     padding: 0px 0px;
-    animation: animate 7s linear infinite;
+    animation: animate 6s linear infinite;
 }
 
 .nav-bar::before {
@@ -106,7 +106,7 @@ body {
 }
 
 .about p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.8;
     color: white;
 }
@@ -154,8 +154,8 @@ hr {
     gap: 10px;
 }
 
-.box.tech-tools{
-    height:340px ;
+.box.tech-tools {
+    height: 340px;
 }
 
 .tech-tools {
@@ -173,7 +173,7 @@ hr {
     background-image: conic-gradient(from var(--angle), #27a0c5, #27a0c5, #6100fd);
     z-index: -1;
     padding: 0px 0px;
-    animation: animate 10s linear infinite;
+    animation: animate 7s linear infinite;
 }
 
 .box::before {
@@ -185,14 +185,15 @@ hr {
     font-size: 1.2rem;
     color: white;
 }
-.icons{
+
+.icons {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }
 
-.icon-circle{
+.icon-circle {
     background: linear-gradient(90deg, #27a0c5, #8941fd);
     border-radius: 50%;
     width: 90px;
@@ -204,12 +205,12 @@ hr {
     margin-bottom: 20px;
 }
 
-.icon-circle:hover{
+.icon-circle:hover {
     transform: scale(1.05);
     box-shadow: 0 0 20px #27a0c5;
 }
 
-.icon-circle::after{
+.icon-circle::after {
     content: attr(data-tooltip);
     position: absolute;
     bottom: -30px;
@@ -223,18 +224,98 @@ hr {
     font-weight: bold;
 }
 
-.icon-circle:hover::after{
+.icon-circle:hover::after {
     opacity: 1;
     transform: translateX(-50%) translateY(5px);
 }
 
 .icon-circle i {
-  font-size: 56px;
+    font-size: 56px;
 }
 
-.projects h1{
+.projects h1 {
     font-size: 3rem;
     margin-bottom: 40px;
     margin-left: 125px;
 }
 
+.projects1 {
+    display: flex;
+}
+
+.projects1 h2 {
+    font-size: 2.4rem;
+    margin: 20px;
+}
+
+#project-description {
+    flex-grow: 1;
+    color: white;
+    font-size: 1.7rem;
+    margin: 20px;
+    line-height: 40px;
+    max-width: 870px;
+}
+
+.phone-container {
+    position: relative;
+    display: inline-block;
+}
+
+.phone-img {
+    margin-top: -210px;
+    max-width: 750px;
+    display: block;
+}
+
+.app-grid {
+    position: absolute;
+    top: 9%;
+    left: 34.6%;
+    width: 36%;
+    height: 30%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.app {
+    text-align: center;
+}
+
+.app a {
+    text-decoration: none;
+    color: black;
+}
+
+.app-icon {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(90deg, #27a0c5, #8941fd);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    transition: all ease-in-out .2s;
+    margin: 0 auto;
+}
+
+.app-icon:hover {
+    transform: scale(1.1);
+}
+
+.app p {
+    margin-top: 10px;
+    color: white;
+
+}
+
+.contact h1 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    margin-left: 125px;
+}
