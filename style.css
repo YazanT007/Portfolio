@@ -316,6 +316,98 @@ hr {
 
 .contact h1 {
     font-size: 3rem;
-    margin-bottom: 40px;
     margin-left: 125px;
+    margin-bottom: 10px;
+}
+
+.contact-forms{
+    display: flex;
+    gap: 200px;
+}
+
+.socials h2{
+    font-size: 2rem;
+    margin-left: 125px;
+}
+
+.socials2{
+    display: flex;
+}
+
+.socials2 h2{
+    font-size: 1.3rem;
+}
+
+.socials p{
+    margin-left: 125px;
+}
+
+.contacts{
+    margin-top: 30px;
+    color: white;
+
+}
+
+#myemail{
+    color: #27a0c5;
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+.media-icons{
+    font-size: 35px;
+    background: linear-gradient(90deg, #27a0c5, #d4a6ff, #8941fd);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    margin-top: -10px;
+}
+
+.message-form h2{
+    font-size: 2rem;
+    margin-right: 260px;
+
+}
+
+.message-form {
+  max-width: 470px;
+  margin: auto;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.message-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.message-form label {
+  margin: 10px 0 5px;
+}
+
+.message-form input,
+.message-form textarea {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.send-btn {
+  background: linear-gradient(90deg, #27a0c5, #8941fd);
+  border: none;
+  border-radius: 12px;
+  padding: 12px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  max-width: 100px;
+}
+
+.send-btn:hover {
+  transform: scale(1.05);
 }
