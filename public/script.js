@@ -24,15 +24,15 @@ form.addEventListener("submit", async (e) => {
     const data = await resp.json();
     if (!resp.ok) throw new Error(data.message || "Failed to send");
 
-    statusEl.style.color = "green";
-    statusEl.textContent = data.message || "Sent!";
+    statusEl.style.color = "#27a0c5";
+    statusEl.textContent = "Message Sent, Thank You! I will get in touch ASAP.";
     form.reset();
   } 
   
   catch (err) {
     console.error(err);
-    statusEl.style.color = "red";
-    statusEl.textContent = err.message || "Could not send message.";
+    statusEl.style.color = "#27a0c5";
+    statusEl.textContent = "Error, could not send message. Please try again.";
   } 
   
   finally {
