@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     min-height: 100vh;
@@ -60,10 +64,17 @@ body {
 }
 
 .logo {
-    color: white;
-    font-weight: bold;
-    font-size: 28px;
-    letter-spacing: 1px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#img-logo {
+    margin-left: 120px;
+    width: 180px;
+    height: 180px;
 }
 
 .navbar {
@@ -84,6 +95,11 @@ body {
     background: linear-gradient(90deg, #27a0c5, #d4a6ff, #8941fd);
     background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.nav-bar a {
+    color: white;
+    text-decoration: none;
 }
 
 .about {
@@ -320,41 +336,41 @@ hr {
     margin-bottom: 10px;
 }
 
-.contact-forms{
+.contact-forms {
     display: flex;
     gap: 200px;
 }
 
-.socials h2{
+.socials h2 {
     font-size: 2rem;
     margin-left: 125px;
 }
 
-.socials2{
+.socials2 {
     display: flex;
 }
 
-.socials2 h2{
+.socials2 h2 {
     font-size: 1.3rem;
 }
 
-.socials p{
+.socials p {
     margin-left: 125px;
 }
 
-.contacts{
+.contacts {
     margin-top: 30px;
     color: white;
 
 }
 
-#myemail{
+#myemail {
     color: #27a0c5;
     text-decoration: underline;
     font-size: 16px;
 }
 
-.media-icons{
+.media-icons {
     font-size: 35px;
     background: linear-gradient(90deg, #27a0c5, #d4a6ff, #8941fd);
     background-clip: text;
@@ -363,51 +379,62 @@ hr {
     margin-top: -10px;
 }
 
-.message-form h2{
+.message-form h2 {
     font-size: 2rem;
     margin-right: 260px;
 
 }
 
 .message-form {
-  max-width: 470px;
-  margin: auto;
-  color: white;
-  font-family: Arial, sans-serif;
+    max-width: 470px;
+    margin: auto;
+    color: white;
+    font-family: Arial, sans-serif;
 }
 
 .message-form form {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .message-form label {
-  margin: 10px 0 5px;
+    margin: 10px 0 5px;
 }
 
 .message-form input,
 .message-form textarea {
-  background: transparent;
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 10px;
-  padding: 10px;
-  color: white;
-  font-size: 14px;
-  margin-bottom: 15px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    font-size: 14px;
+    margin-bottom: 15px;
 }
 
 .send-btn {
-  background: linear-gradient(90deg, #27a0c5, #8941fd);
-  border: none;
-  border-radius: 12px;
-  padding: 12px;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  max-width: 100px;
+    background: linear-gradient(90deg, #27a0c5, #8941fd);
+    border: none;
+    border-radius: 12px;
+    padding: 12px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    max-width: 100px;
 }
 
 .send-btn:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 1.2s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
 }

@@ -1,3 +1,16 @@
+const sections = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
+});
+
+sections.forEach((section) => observer.observe(section));
+
+
 const form = document.getElementById("contact-form");
 const statusEl = document.getElementById("form-status");
 
