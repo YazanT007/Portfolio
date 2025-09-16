@@ -5,7 +5,7 @@ The portfolio highlights my skills, projects, and experience with a sleek design
 
 ---
 
-## ✨ Features
+## Features
 
 - **Custom Design**: Handcrafted layout 
 - **Responsive**: Fully mobile-friendly (works on phones, tablets, and desktops)  
@@ -16,7 +16,7 @@ The portfolio highlights my skills, projects, and experience with a sleek design
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Frontend**: HTML5, CSS3, JavaScript (Vanilla JS)  
 - **Backend**: Node.js, Express.js  
@@ -24,7 +24,7 @@ The portfolio highlights my skills, projects, and experience with a sleek design
 
 ---
 
-## 📸 Portfolio Preview
+## Portfolio Preview
 
 <img width="1705" height="449" alt="image" src="https://github.com/user-attachments/assets/9d269a45-dc11-4001-9e44-131c41b19304" />
 <img width="1785" height="716" alt="image" src="https://github.com/user-attachments/assets/d5b82311-f000-451a-9da1-72998e396e8b" />
@@ -33,7 +33,7 @@ The portfolio highlights my skills, projects, and experience with a sleek design
 
 ---
 
-## 🚀 Check it out
+## Check it out
 
 👉 [Click here to view my Portfolio](https://myportfolio-yazane0007.onrender.com)  
  
