@@ -127,6 +127,16 @@ body {
     color: white;
 }
 
+.cursor-blink {
+    color: #27a0c5;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
 hr {
     width: 90%;
     border: none;
@@ -164,14 +174,22 @@ hr {
     border: none;
     border-radius: 25px;
     width: 590px;
-    height: 240px;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding: 20px 20px 50px 20px;
+}
+
+.box.front-end {
+    height: auto;
+}
+
+.box.back-end {
+    height: auto;
 }
 
 .box.tech-tools {
-    height: 340px;
+    height: auto;
 }
 
 .tech-tools {
@@ -197,16 +215,19 @@ hr {
 }
 
 .box h2 {
-    padding: 5px 20px;
+    padding: 0px 0px 10px 0px;
     font-size: 1.2rem;
     color: white;
+    margin: 0;
 }
 
 .icons {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
+    padding: 10px;
+    row-gap: 50px;
 }
 
 .icon-circle {
@@ -218,7 +239,7 @@ hr {
     justify-content: center;
     align-items: center;
     transition: all ease-in-out 0.2s;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
 .icon-circle:hover {
@@ -229,15 +250,16 @@ hr {
 .icon-circle::after {
     content: attr(data-tooltip);
     position: absolute;
-    bottom: -30px;
+    bottom: -35px;
     left: 50%;
     transform: translateX(-50%);
     color: #27a0c5;
     padding: 5px 5px;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.2s ease-in-out, tarnsform 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
     font-weight: bold;
+    white-space: nowrap;
 }
 
 .icon-circle:hover::after {
@@ -442,25 +464,32 @@ hr {
 @media (max-width: 768px) {
     .nav-bar {
         flex-direction: column;
-        width: 85%;
-        padding: 10px 15px;
+        width: 90%;
+        padding: 15px;
         gap: 15px;
     }
 
     #img-logo {
         margin-left: 0;
-        width: 120px;
+        width: 100px;
         height: auto;
     }
 
     .navbar {
-        flex-direction: column;
-        gap: 15px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .navbar li {
+        font-size: 16px;
     }
 
     .about {
         margin-left: 20px;
         margin-right: 20px;
+        margin-top: 40px;
         text-align: center;
     }
 
@@ -468,10 +497,19 @@ hr {
         font-size: 2rem;
     }
 
+    .about p {
+        font-size: 1rem;
+    }
+
+    .skills {
+        margin-top: 40px;
+    }
+
     .skills h1,
     .projects h1,
     .contact h1 {
         margin-left: 20px;
+        margin-right: 20px;
         font-size: 2rem;
         text-align: center;
     }
@@ -480,69 +518,165 @@ hr {
         flex-direction: column;
         gap: 30px;
         align-items: center;
+        padding: 0 10px;
     }
 
     .box {
-        width: 90%;
+        width: 95%;
+        max-width: 450px;
         height: auto;
-        padding: 15px;
+        padding: 20px 15px 50px 15px;
+    }
+
+    .box h2 {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .icons {
+        gap: 20px;
+        row-gap: 45px;
+        padding: 5px;
+    }
+
+    .icon-circle {
+        width: 75px;
+        height: 75px;
+    }
+
+    .icon-circle i {
+        font-size: 42px;
+    }
+
+    .icon-circle::after {
+        font-size: 12px;
+        bottom: -32px;
+    }
+
+    .box.front-end {
+        height: auto;
+    }
+
+    .box.back-end {
+        height: auto;
     }
 
     .box.tech-tools {
-        height: 590px;
+        height: auto;
+    }
+
+    .projects {
+        margin-top: 40px;
     }
 
     .projects1 {
         flex-direction: column;
         text-align: center;
+        padding: 0 10px;
+    }
+
+    .projects1 h2 {
+        font-size: 1.8rem;
+        margin: 10px;
+    }
+
+    #project-description {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin: 10px;
     }
 
     .phone-container {
+        order: 1;
+        margin: 20px auto;
+    }
+
+    .projects1>div:last-child {
         order: 2;
     }
 
-    .projects1>div:first-of-type {
-        order: 1;
-    }
-
     .phone-img {
-        max-width: 150%;
-        margin-top: -100px;
-        margin-left: -100px;
+        max-width: 100%;
+        margin-top: 0;
+        margin-left: 0;
     }
-
 
     .app-grid {
-        top: 20%;
-        left: 28.5%;
-        width: 50%;
+        top: 9%;
+        left: 34.6%;
+        width: 36%;
         height: auto;
-        gap: 10px;
+        gap: 5px;
     }
 
     .app-icon {
-        width: 45px;
-        height: 45px;
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+    }
+
+    .app p {
+        font-size: 10px;
+        margin-top: 5px;
+    }
+
+    .contact {
+        margin-top: 40px;
     }
 
     .contact-forms {
         flex-direction: column;
-        gap: 40px;
+        gap: 30px;
         align-items: center;
+        padding: 0 10px;
     }
 
-    .socials h2,
-    .socials p {
-        margin-left: 20px;
-        text-align: center;
+    .message-form {
+        width: 95%;
+        max-width: 450px;
     }
 
     .message-form h2 {
         margin-right: 0;
         text-align: center;
+        font-size: 1.5rem;
     }
 
-    .message-form {
-        width: 90%;
+    .message-form input,
+    .message-form textarea {
+        font-size: 16px;
+    }
+
+    .footer {
+        padding: 30px 15px 15px;
+        margin-top: 40px;
+    }
+
+    .footer-content {
+        gap: 20px;
+    }
+
+    .footer-email h3,
+    .footer-socials h3 {
+        font-size: 1rem;
+    }
+
+    .footer-email #myemail {
+        font-size: 14px;
+    }
+
+    .footer-socials .media-icons {
+        font-size: 28px;
+        gap: 15px;
+    }
+
+    .footer-copy {
+        font-size: 12px;
+    }
+
+    hr {
+        width: 95%;
+        margin-top: 40px;
+        margin-bottom: 20px;
     }
 }
