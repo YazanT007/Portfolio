@@ -18,7 +18,7 @@
         <ul class="navbar">
             <li><a href="#about-section">About</a></li>
             <li><a href="#skills-section">Skills</a></li>
-            <li><a href="#project-section">Projects</a></li>
+            <li><a href="#featured-projects-section">Projects</a></li>
             <li><a href="#contact-section">Contact</a></li>
         </ul>
     </div>
@@ -93,9 +93,31 @@
     </section>
     <hr>
 
+    <section class="reveal featured-projects" id="featured-projects-section">
+        <h1><span class="gradient-text">Projects</span></h1>
+        <div class="projects-grid">
+            <a href="https://7slni-sigma.vercel.app/" target="_blank" class="project-card" rel="noopener">
+                <img src="assets/7slni.png" alt="7slni - NFT Card Generator">
+                <div class="project-info">
+                    <h3>7slni</h3>
+                    <p>An NFT card generator that allows you to design and customize your page with personalized colors, layouts, and styles.</p>
+                </div>
+            </a>
+            
+            <a href="https://www.vsimsar.com/" target="_blank" class="project-card" rel="noopener">
+                <img src="assets/Vsimsar.png" alt="VSimSar - Virtual property tours">
+                <div class="project-info">
+                    <h3>VSimSar</h3>
+                    <p>360° virtual tour platform for real estate properties (In Development). Features interactive room-by-room navigation for apartments and hotels.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+    <hr>
+
     <section class="reveal" id="project-section">
         <div class="projects">
-            <h1><span class="gradient-text">Projects</span></h1>
+            <h1><span class="gradient-text">Interactive Demos</span></h1>
             <div class="projects1">
                 <div class="phone-container">
                     <img src="assets/mobile.png" alt="hand-holding-a-mobile" class="phone-img">
@@ -162,43 +184,64 @@
 
     <section class="reveal" id="contact-section">
         <div class="contact">
-            <h1><span class="gradient-text">Contact</span></h1>
-            <div class="contact-forms">
-                <div class="socials">
-                    <h2><span class="gradient-text">Any Enquiries? Get In Touch</span></h2>
-                    <div class="socials2">
-                        <div class="email">
-                            <h2 class="contacts">Email</h2>
-                            <p id="myemail">yazaneltaha07@gmail.com</p>
+            <h1><span class="gradient-text">Let's Connect</span></h1>
+            <p class="contact-subtitle">Have a question or want to work together? Feel free to reach out!</p>
+            
+            <div class="contact-container">
+                <div class="contact-info-card">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fa-solid fa-envelope"></i>
                         </div>
-                        <div class="media">
-                            <h2 class="contacts">Media</h2>
+                        <div class="info-content">
+                            <h3>Email</h3>
+                            <a href="mailto:yazaneltaha07@gmail.com" id="myemail">yazaneltaha07@gmail.com</a>
+                        </div>
+                    </div>
 
-                            <p class="media-icons">
-                                <a href="https://linkedin.com/in/yazan-el-taha-0007yz" target="_blank"><i
-                                        class="fa-brands fa-linkedin"></i></a>
-                                <a href="https://github.com/YazanT007" target="_blank"><i
-                                        class="fa-brands fa-github"></i></a>
-                                <a href="https://www.instagram.com/yazan.el_taha/?hl=en" target="_blank"><i
-                                        class="fa-brands fa-instagram"></i></a>
-                            </p>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Connect With Me</h3>
+                            <div class="social-links">
+                                <a href="https://linkedin.com/in/yazan-el-taha-0007yz" target="_blank" aria-label="LinkedIn" class="social-link">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </a>
+                                <a href="https://github.com/YazanT007" target="_blank" aria-label="GitHub" class="social-link">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                                <a href="https://www.instagram.com/yazan.el_taha/?hl=en" target="_blank" aria-label="Instagram" class="social-link">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="message-form">
-                    <h2><span class="gradient-text">Contact Form</span></h2>
+                <div class="contact-form-card">
+                    <h2>Send a Message</h2>
                     <form id="contact-form">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                        </div>
 
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                        </div>
 
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+                        </div>
 
-                        <button type="submit" class="send-btn">Send</button>
+                        <button type="submit" class="send-btn">
+                            <span>Send Message</span>
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
                         <p id="form-status" aria-live="polite"></p>
                     </form>
                 </div>
